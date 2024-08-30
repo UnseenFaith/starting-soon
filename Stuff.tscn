@@ -2,21 +2,30 @@
 
 [ext_resource type="FontFile" uid="uid://427y8l14jw8j" path="res://BodoniModaSC-Italic-VariableFont_opsz,wght.ttf" id="1_y0aqd"]
 
-[node name="Panel" type="Node"]
+[node name="Panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(1, 0.905882, 0.698039, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
 theme_override_fonts/normal_font = ExtResource("1_y0aqd")
 theme_override_font_sizes/normal_font_size = 150
 theme_override_font_sizes/bold_font_size = 150
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=3.0 connected=1]STARTING[/wave]
-[wave amp=50.0 freq=3.0 connected=1]   SOON...[/wave]
+text = "[wave amp=50.0 freq=3.0 connected=1] STARTING[/wave]
+[wave amp=50.0 freq=3.0 connected=1]    SOON...[/wave]
 "
 scroll_active = false
 autowrap_mode = 0
