@@ -1,7 +1,10 @@
 extends Control
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	JavaScriptBridge.eval("alert(window.location.search)")
-	if Input.is_action_just_pressed("switch"):
-		$StartingSoon.visible = !$StartingSoon.visible
-		$BeRightBack.visible = !$BeRightBack.visible
+
+func _ready() -> void:
+	var web_hash = JavaScriptBridge.eval("window.location.hash")
+	if web_hash:
+		var replaced_text = web_hash.replace("#", "")
+		var text1 = replaced_text.split(";")[0]
+		var text2 = replaced_text.split(";")[1]
+		$TextLabel.text = $TextLabel.text.replace("{text1}", text1).replace("{text2}", text2)
+		

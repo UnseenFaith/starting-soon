@@ -12,8 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wyvax")
 
-[node name="StartingSoon" type="RichTextLabel" parent="."]
-visible = false
+[node name="TextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,29 +26,8 @@ theme_override_fonts/normal_font = ExtResource("1_y0aqd")
 theme_override_font_sizes/normal_font_size = 150
 theme_override_font_sizes/bold_font_size = 150
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=3.0 connected=1] STARTING[/wave]
-[wave amp=50.0 freq=3.0 connected=1]    SOON...[/wave]
-"
-scroll_active = false
-autowrap_mode = 0
-shortcut_keys_enabled = false
-
-[node name="BeRightBack" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(1, 0.905882, 0.698039, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 10
-theme_override_fonts/normal_font = ExtResource("1_y0aqd")
-theme_override_font_sizes/normal_font_size = 150
-theme_override_font_sizes/bold_font_size = 150
-bbcode_enabled = true
-text = "[wave amp=50.0 freq=3.0 connected=1] BE RIGHT[/wave]
-[wave amp=50.0 freq=3.0 connected=1]    BACK...[/wave]
+text = "[wave amp=50.0 freq=3.0 connected=1] {text1}[/wave]
+[wave amp=50.0 freq=3.0 connected=1]    {text2}...[/wave]
 "
 scroll_active = false
 autowrap_mode = 0
